@@ -1,0 +1,32 @@
+[
+  {
+    "title": "joão romão.",
+    "description": "Brief description of Project 1. Desktop and mobile previews shown side by side.",
+    "github": "",
+    "images": [
+      "./static/profile.jpg"
+    ],
+    "tags": []
+  },
+  {
+    "title": "aston martin f1.",
+    "description": "Brief description of Project 2.",
+    "github": "https://github.com/yourusername/project2",
+    "images": [],
+    "tags": ["Python", "Flask", "API"]
+  },
+  {
+    "title": "amazon.",
+    "description": "Brief description of Project 2.",
+    "github": "https://github.com/yourusername/project2",
+    "images": [],
+    "tags": ["Python", "Flask", "API"]
+  },
+  {
+    "title": "university of porto.",
+    "description": "Brief description of Project 2.",
+    "github": "https://github.com/yourusername/project2",
+    "images": [],
+    "tags": ["Python", "Flask", "API"]
+  }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "title": "Project 1 Title",
+    "description": "Brief description of Project 1. Desktop and mobile previews shown side by side.",
+    "github": "https://github.com/yourusername/project1",
+    "images": [
+      "https://media.giphy.com/media/xTiTnl9fyM3v3VrnKE/giphy.gif",
+      "https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif",
+      "./static/profile.jpg"
+    ],
+    "tags": ["React", "TypeScript", "CSS"]
+  },
+  {
+    "title": "Project 2 Title",
+    "description": "Brief description of Project 2.",
+    "github": "https://github.com/yourusername/project2",
+    "images": [
+        "https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif"
+    ],
+    "tags": ["Python", "Flask", "API"]
+  },
+  {
+    "title": "Project 2 Title",
+    "description": "Brief description of Project 2.",
+    "github": "https://github.com/yourusername/project2",
+    "images": [
+        "https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif"
+    ],
+    "tags": ["Python", "Flask", "API"]
+  },
+  {
+    "title": "Project 2 Title",
+    "description": "Brief description of Project 2.",
+    "github": "https://github.com/yourusername/project2",
+    "images": [
+        "https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif"
+    ],
+    "tags": ["Python", "Flask", "API"]
+  }
+]
