@@ -1,8 +1,11 @@
 [
   {
     "title": "joão romão.",
-    "description": "Brief description of Project 1. Desktop and mobile previews shown side by side.",
-    "github": "",
+    "description": [
+      "25yo software engineer originally viseu, portugal.",
+      "currently based in the uk."
+    ],
+    "github": "https://github.com/joaodiogoromao",
     "images": [
       "./static/profile.jpg"
     ],

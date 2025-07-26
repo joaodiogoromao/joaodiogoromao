@@ -1,14 +1,18 @@
 [
   {
-    "title": "Project 1 Title",
-    "description": "Brief description of Project 1. Desktop and mobile previews shown side by side.",
-    "github": "https://github.com/yourusername/project1",
+    "title": "inclusive.",
+    "description": [
+      "a annotations web application.", 
+      "allows to draw annotations on images, whiteboard, videos.",
+      "also includes speech-to-text and background removal when recording."
+    ],
+    "github": "https://github.com/joaodiogoromao/inclusive",
     "images": [
       "https://media.giphy.com/media/xTiTnl9fyM3v3VrnKE/giphy.gif",
       "https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif",
       "./static/profile.jpg"
     ],
-    "tags": ["React", "TypeScript", "CSS"]
+    "tags": ["React", "TypeScript", "TensorFlow"]
   },
   {
     "title": "Project 2 Title",

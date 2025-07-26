@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
+  function formatDescription(description) {
+    if (Array.isArray(description)) {
+      return description.map(item => `<p style="margin: 0.5em 0;">${item}</p>`).join('');
+    }
+    return `<p style="margin: 0.5em 0;">${description}</p>`;
+  }
+
   function createSection(containerId, data) {
     const container = document.getElementById(containerId);
     data.forEach((entry) => {
@@ -81,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub icon">
           </a>
         </div>
-        <p class="project-desc">${entry.description}</p>
+        ${formatDescription(entry.description)}
         <div class="tags">
           ${entry.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
         </div>
