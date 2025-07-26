@@ -16,14 +16,14 @@
     "description": "Brief description of Project 2.",
     "github": "https://github.com/yourusername/project2",
     "images": [],
-    "tags": ["Python", "Flask", "API"]
+    "tags": ["python", "c#", "graphql"]
   },
   {
     "title": "amazon.",
     "description": "Brief description of Project 2.",
     "github": "https://github.com/yourusername/project2",
     "images": [],
-    "tags": ["Python", "Flask", "API"]
+    "tags": ["java", "aws", "graphql"]
   },
   {
     "title": "university of porto.",

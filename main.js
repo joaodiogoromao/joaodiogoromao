@@ -1,9 +1,27 @@
-document.addEventListener('DOMContentLoaded', function() {
-  function formatDescription(description) {
-    if (Array.isArray(description)) {
-      return description.map(item => `<p style="margin: 0.5em 0;">${item}</p>`).join('');
+document.addEventListener('DOMContentLoaded', function () {
+  function formatDescription(description, readMore) {
+    if (!readMore) {
+      if (Array.isArray(description)) {
+        return description.map(item => `<p style="margin: 0.5em 0;">${item}</p>`).join('');
+      }
+      return `<p style="margin: 0.5em 0;">${description}</p>`;
     }
-    return `<p style="margin: 0.5em 0;">${description}</p>`;
+
+    const isArray = Array.isArray(description);
+    const fullDescription = isArray
+      ? description.map(item => `<p style="margin: 0.3em 0;">${item}</p>`).join('')
+      : `<p style="margin: 0.3em 0;">${description}</p>`;
+
+    const truncatedDescription = isArray
+      ? `<p style="margin: 0.3em 0;">${description[0]}</p>`
+      : `<p style="margin: 0.3em 0;">${description.split('.')[0]}...</p>`;
+
+    return `
+      <div class="description">
+        <div class="truncated">${truncatedDescription}</div>
+        <div class="full" style="display: none;">${fullDescription}</div>
+      </div>
+    `;
   }
 
   function createSection(containerId, data) {
@@ -84,11 +102,16 @@ document.addEventListener('DOMContentLoaded', function() {
       projectContent.innerHTML = `
         <div class="project-header">
           <div class="project-title">${entry.title}</div>
-          <a class="github-link" href="${entry.github}" target="_blank" rel="noopener noreferrer">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub icon">
-          </a>
+          <div class="links">
+            <a class="link github-link" href="${entry.github}" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub icon">
+            </a>
+            ${entry.readMore ? `<a class="link toggle-description" href="">
+              <img class="expand-icon" src="https://www.svgrepo.com/show/532508/expand-alt.svg" alt="Expand icon" />
+            </a>` : ''}
+          </div>
         </div>
-        ${formatDescription(entry.description)}
+        ${formatDescription(entry.description, entry.readMore)}
         <div class="tags">
           ${entry.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
         </div>
@@ -105,4 +128,32 @@ document.addEventListener('DOMContentLoaded', function() {
   fetch('bio.json')
     .then(response => response.json())
     .then(bio => createSection('bio-container', bio));
+});
+
+document.addEventListener('click', function (e) {
+  if (e.target.classList.contains('toggle-description') || e.target.closest('.toggle-description')) {
+    e.preventDefault();
+    console.log(e.target.parentElement.parentElement.parentElement);
+
+    const descriptionDiv = e.target.parentElement.parentElement.parentElement.parentElement.querySelector('.description');
+    const truncated = descriptionDiv.querySelector('.truncated');
+    const full = descriptionDiv.querySelector('.full');
+    const isExpanded = full.style.display === 'block';
+
+    // Toggle description visibility
+    truncated.style.display = isExpanded ? 'block' : 'none';
+    full.style.display = isExpanded ? 'none' : 'block';
+
+    // Toggle image container visibility
+    const article = descriptionDiv.closest('.project');
+    const imageContainer = article.querySelector('.carousel');
+    imageContainer.style.display = isExpanded ? 'block' : 'none';
+
+
+    // Update button text
+    const toggleIcon = e.target.closest('.toggle-description').querySelector('.expand-icon');
+    toggleIcon.src = isExpanded
+      ? 'https://www.svgrepo.com/show/532508/expand-alt.svg' // Expand icon
+      : 'https://www.svgrepo.com/show/445653/collapse-fullscreen.svg'; // Collapse icon
+  }
 });

@@ -1,0 +1,216 @@
+:root {
+    --bg: #f9f9f9;
+    --fg: #1d1d1f;
+    --border: #d2d2d7;
+    --card-bg: #fff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    --tag-bg: #eff0f3;
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Helvetica, Arial, sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 975px;
+    background: var(--bg);
+    font-family: var(--font-family);
+    color: var(--fg);
+    line-height: 1.6;
+}
+
+h1,
+h2 {
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.3em;
+    margin-top: 1.5em;
+}
+
+.projects-grid {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    overflow-x: auto;
+    padding-bottom: 1.5rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar styling */
+.projects-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.projects-grid::-webkit-scrollbar-track {
+    background: var(--bg);
+    border-radius: 4px;
+}
+
+.projects-grid::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+.projects-grid::-webkit-scrollbar-thumb:hover {
+    background: #aeaeae;
+}
+
+.project {
+    background: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 300px;
+    /* Fixed width */
+    height: 375px;
+    /* Fixed height to maintain aspect ratio */
+    aspect-ratio: unset;
+    /* Disable aspect ratio enforcement */
+}
+
+.project:hover {
+    transform: translateY(-4px);
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.carousel:hover .carousel-arrow {
+    opacity: 1;
+}
+
+.carousel-arrow.left {
+    left: 0.5rem;
+}
+
+.carousel-arrow.right {
+    right: 0.5rem;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.4rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.dot.active {
+    background: #fff;
+}
+
+.project-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 0.5rem;
+}
+
+.link .github-link {
+    display: inline-flex;
+    line-height: 0;
+    margin-left: auto;
+}
+
+.link img {
+    width: 1.25em;
+    height: 1.25em;
+    vertical-align: middle;
+    filter: grayscale(1);
+    transition: filter 0.2s ease;
+}
+
+.link:hover img {
+    filter: none;
+}
+
+.project-desc {
+    margin: 0;
+    color: #4d4d4d;
+    font-size: 0.85rem;
+}
+
+.tags {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: var(--tag-bg);
+    color: var(--fg);
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.description .full {
+    display: none;
+}

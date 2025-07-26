@@ -1,44 +1,46 @@
 [
   {
+    "title": "three-dragons.",
+    "description": "a webgl implementation of the three dragons board game.",
+    "github": "https://github.com/joaodiogoromao/three-dragons",
+    "images": [
+        "./static/three-dragons-demo.gif"
+    ],
+    "tags": ["webgl", "javascript", "prolog"]
+  },
+  {
+    "title": "match-the-tiles.",
+    "description": "a unity implementation of the match the tiles game.",
+    "github": "https://github.com/joaodiogoromao/match-the-tiles",
+    "images": [
+        "./static/match-the-tiles-1.gif",
+        "./static/match-the-tiles-2.gif"
+    ],
+    "tags": ["c#", "unity", "ml-agents"]
+  },
+  {
+    "title": "tech-council.",
+    "description": "a q&a web application.",
+    "github": "https://github.com/joaodiogoromao/tech-council",
+    "images": [
+        "./static/tech-council-demo.gif"
+    ],
+    "tags": ["laravel", "php", "javascript"]
+  },
+  {
     "title": "inclusive.",
     "description": [
-      "a annotations web application.", 
+      "an annotations web application.", 
       "allows to draw annotations on images, whiteboard, videos.",
       "also includes speech-to-text and background removal when recording."
     ],
+    "readMore": true,
     "github": "https://github.com/joaodiogoromao/inclusive",
     "images": [
-      "https://media.giphy.com/media/xTiTnl9fyM3v3VrnKE/giphy.gif",
-      "https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif",
-      "./static/profile.jpg"
+      "./static/inclusive-2.png",
+      "./static/inclusive-3.png",
+      "./static/inclusive-4.jpg"
     ],
-    "tags": ["React", "TypeScript", "TensorFlow"]
-  },
-  {
-    "title": "Project 2 Title",
-    "description": "Brief description of Project 2.",
-    "github": "https://github.com/yourusername/project2",
-    "images": [
-        "https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif"
-    ],
-    "tags": ["Python", "Flask", "API"]
-  },
-  {
-    "title": "Project 2 Title",
-    "description": "Brief description of Project 2.",
-    "github": "https://github.com/yourusername/project2",
-    "images": [
-        "https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif"
-    ],
-    "tags": ["Python", "Flask", "API"]
-  },
-  {
-    "title": "Project 2 Title",
-    "description": "Brief description of Project 2.",
-    "github": "https://github.com/yourusername/project2",
-    "images": [
-        "https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif"
-    ],
-    "tags": ["Python", "Flask", "API"]
+    "tags": ["react", "javascript", "tensorflow"]
   }
 ]
