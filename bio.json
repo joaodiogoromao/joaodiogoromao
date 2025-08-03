@@ -1,9 +1,9 @@
 [
   {
-    "title": "joão romão.",
+    "title": "João Romão.",
     "description": [
-      "25yo software engineer originally viseu, portugal.",
-      "currently based in the uk."
+      "Software Engineer from Viseu, Portugal.",
+      "Currently based in the UK."
     ],
     "github": "https://github.com/joaodiogoromao",
     "images": [
@@ -12,24 +12,39 @@
     "tags": []
   },
   {
-    "title": "aston martin f1.",
-    "description": "Brief description of Project 2.",
-    "github": "https://github.com/yourusername/project2",
-    "images": [],
+    "title": "Aston Martin F1.",
+    "description": [
+      "Part of the Performance Software group, primarily contributing to the off-car data processing pipeline."
+    ],
+    "github": "",
+    "images": [
+      "./static/aston-1.JPG"
+    ],
     "tags": ["python", "c#", "graphql"]
   },
   {
-    "title": "amazon.",
-    "description": "Brief description of Project 2.",
-    "github": "https://github.com/yourusername/project2",
-    "images": [],
+    "title": "Amazon.",
+    "description": [
+      "Worked within the team that owned for the Library section of the Kindle app.",
+      "Designed and developed a service to synchronise book ratings across multiple devices owned by the same Amazon account."
+    ],
+    "readMore": true,
+    "github": "",
+    "images": [
+      "./static/amazon-1.JPEG",
+      "./static/amazon-2.JPEG"
+    ],
     "tags": ["java", "aws", "graphql"]
   },
   {
-    "title": "university of porto.",
-    "description": "Brief description of Project 2.",
-    "github": "https://github.com/yourusername/project2",
+    "title": "University of Porto.",
+    "description": [
+      "BSc + MSc in Informatics and Computer Engineering @ Faculty of Engineering of the University of Porto.",
+      "Graduated in 2023, ending my Bachelor's degree with an average grade of 18/20 and my Master's degree with 17/20.",
+      "ERASMUS in 2022/23 at the Universidad Politécnica de Madrid."
+    ],
+    "github": "",
     "images": [],
-    "tags": ["Python", "Flask", "API"]
+    "tags": []
   }
 ]

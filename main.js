@@ -103,9 +103,9 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="project-header">
           <div class="project-title">${entry.title}</div>
           <div class="links">
-            <a class="link github-link" href="${entry.github}" target="_blank" rel="noopener noreferrer">
+            ${entry.github ? `<a class="link github-link" href="${entry.github}" target="_blank" rel="noopener noreferrer">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub icon">
-            </a>
+            </a>` : ''}
             ${entry.readMore ? `<a class="link toggle-description" href="">
               <img class="expand-icon" src="https://www.svgrepo.com/show/532508/expand-alt.svg" alt="Expand icon" />
             </a>` : ''}

@@ -1,7 +1,7 @@
 [
   {
     "title": "three-dragons.",
-    "description": "a webgl implementation of the three dragons board game.",
+    "description": "A WebGL implementation of the three dragons board game.",
     "github": "https://github.com/joaodiogoromao/three-dragons",
     "images": [
         "./static/three-dragons-demo.gif"
@@ -10,7 +10,13 @@
   },
   {
     "title": "match-the-tiles.",
-    "description": "a unity implementation of the match the tiles game.",
+    "description": [
+      "Implementation of the match the tiles game.",
+      "Developed to show the execution of classic shortest path and reinforcement learning algorithms.",
+      "In single player mode, the user can try to solve the puzzle accessing hints calculated by the algorithms.",
+      "In AI mode, it is possible to visualise an agent solving the puzzle."
+    ],
+    "readMore": true,
     "github": "https://github.com/joaodiogoromao/match-the-tiles",
     "images": [
         "./static/match-the-tiles-1.gif",
@@ -20,7 +26,7 @@
   },
   {
     "title": "tech-council.",
-    "description": "a q&a web application.",
+    "description": "A Q&A forum web application.",
     "github": "https://github.com/joaodiogoromao/tech-council",
     "images": [
         "./static/tech-council-demo.gif"
@@ -30,9 +36,9 @@
   {
     "title": "inclusive.",
     "description": [
-      "an annotations web application.", 
-      "allows to draw annotations on images, whiteboard, videos.",
-      "also includes speech-to-text and background removal when recording."
+      "An annotations web application.", 
+      "Allows to draw annotations on a whiteboard or on top of images, videos or screen sharings.",
+      "Also includes speech-to-text and background removal when recording."
     ],
     "readMore": true,
     "github": "https://github.com/joaodiogoromao/inclusive",

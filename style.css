@@ -214,3 +214,8 @@ h2 {
 .description .full {
     display: none;
 }
+
+p {
+    /* make text size smaller */
+    font-size: 0.9rem;
+}
